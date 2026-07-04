@@ -161,10 +161,10 @@ export default function Login() {
           <p className="text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
             ¿Querés dar cursos?{' '}
             <a
-              href="mailto:cursos-online@gmail.com"
+              href="mailto:danielmedina89@gmail.com"
               className="font-medium text-blue-600 dark:text-blue-400 hover:underline"
             >
-              Escribinos a cursos-online@gmail.com
+              Escribinos a danielmedina89@gmail.com
             </a>
             {' '}para obtener acceso de profesor.
           </p>

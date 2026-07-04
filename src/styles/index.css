@@ -1,0 +1,120 @@
+/* ============================================================
+   Estilos Globales - Tailwind CSS + Dark Mode
+   ============================================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Estilos personalizados con Dark Mode
+   ============================================================ */
+
+body {
+  @apply bg-gray-100 min-h-screen;
+  @apply dark:bg-gray-900;
+}
+
+/* Botones */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+/* Formularios */
+.input-field {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400;
+}
+
+.label-field {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+  @apply dark:text-gray-300;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+  @apply dark:bg-gray-800 dark:shadow-gray-900/50;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply bg-gray-800 text-white w-64 min-h-screen p-4;
+  @apply dark:bg-gray-900;
+}
+
+/* Estados de unidades */
+.unit-locked {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.unit-completed {
+  @apply bg-green-100 border-l-4 border-green-500;
+  @apply dark:bg-green-900/30 dark:border-green-600;
+}
+
+.unit-active {
+  @apply bg-blue-100 border-l-4 border-blue-500;
+  @apply dark:bg-blue-900/30 dark:border-blue-600;
+}
+
+/* Animación candado */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.lock-shake:hover {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Video responsive */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Imagen de contenido */
+.content-image {
+  @apply max-w-full h-auto rounded-lg shadow-md;
+}
+
+/* ============================================================
+   Estilos para el menú móvil
+   ============================================================ */
+.mobile-menu {
+  @apply fixed inset-0 z-50 bg-white dark:bg-gray-800 transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu.hidden {
+  @apply -translate-x-full;
+}
+
+.mobile-menu.visible {
+  @apply translate-x-0;
+}
+
+/* Overlay del menú móvil */
+.mobile-overlay {
+  @apply fixed inset-0 z-40 bg-black/50 transition-opacity duration-300;
+}
